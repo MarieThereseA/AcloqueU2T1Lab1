@@ -38,29 +38,29 @@ public class Point {
     }
 
     public String quadrant(){
+        String output = "";
         if (x > 0 && y > 0){
-            return "I";
+            output = "I";
         }
-
-        if ( x > 0 && y< 0){
-            return "IV";
+        else if ( x > 0 && y< 0){
+            output = "IV";
         }
-
-        if (x<0 && y<0){
-            return "III";
+        else if (x<0 && y<0){
+            output = "III";
         }
-
-        if (x < 0 && y > 0){
-            return "II";
+        else if (x < 0 && y > 0){
+            output = "II";
         }
-
-        if (x = 0 && y = 0){
-            return "origin";
+        else if (x == 0 && y == 0){
+            output = "origin";
         }
-
-        if (x = 0 || y = 0){
-            return "on an axis";
+        else if (x == 0){
+            output = "on an axis";
         }
+        else if (y == 0) {
+            output = "on an axis";
+        }
+        return output;
     }
 
 
